@@ -16,7 +16,7 @@ jobs:
     - name: setting python3.5
       uses: actions/setup-python@v1
       with:
-        python-version:3.5
+        python-version: 3.5
       
     - name: Run make commande
       run: make hello
