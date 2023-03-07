@@ -12,9 +12,20 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Run a one line script
-      run: echo Hello World!
+
+    - name: setting python3.5
+      uses: actions/setup-python@v1
+      with:
+        python-version:3.5
       
     - name: Run make commande
       run: make hello
+    
+    - name: Installation dependecies
+      run: make install
+
+    - name: Lint with pylint
+      run: make lint
+
+    - name: Test with pytest
+      run: make test
