@@ -11,8 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - uses: actions/checkout@v2
+    
     - name: Run a one line script
-      shell: echo Hello World!
+      run: echo Hello World!
       
     - name: Run make commande
-      shell: make hello
+      run: make hello
